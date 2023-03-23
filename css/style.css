@@ -118,3 +118,15 @@ img{
 .slider .item img.filter{
     opacity: 1;
 }
+
+
+/* BUTTONS */
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 80px;
+    margin-bottom: 10px;
+}

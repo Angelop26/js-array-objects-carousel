@@ -46,6 +46,7 @@ leftItemArray[itemArrayIndex].classList.add('active')
 rightItemArray[itemArrayIndex].classList.add('border-opacity')
 rightImgArray[itemArrayIndex].classList.add('filter')
 
+//implementiamo la freccia in alto
 const upbtn = document.querySelector('.up-slide')
 upbtn.addEventListener('click', function() {
     clearInterval(interval)
@@ -64,6 +65,31 @@ dwnbtn.addEventListener('click', function(){
 let interval = setInterval(slideDown, 3000)
 mouseOverOut()
 
+//implementiamo il click sulle thumbnails
+// for(i = 0; i< rightImgArray.length; i++){
+//     const curItem = rightImgArray[i]
+//     curItem.addEventListener('click', function(){
+//         clearInterval(interval)
+//     slideDown()
+//     })
+// } 
+
+//implementazione button start
+document.getElementById('start').addEventListener('click', function(){
+    clearInterval(interval)
+    interval = setInterval(slideDown, 3000)
+})
+
+//implementazione button stop
+document.getElementById('stop').addEventListener('click', function(){
+    clearInterval(interval)
+})
+
+//implementazione button reverse
+document.getElementById('reverse').addEventListener('click', function(){
+    clearInterval(interval)
+    interval = setInterval(slideUp, 3000)
+})
 ///////////////////////////////////////////////////////////////////////////
 //FUNCTION
 function slideDown(){
